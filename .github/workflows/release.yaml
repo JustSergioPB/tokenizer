@@ -5,21 +5,29 @@ on:
         branches:
             - main
 
+permissions:
+  contents: read # for checkout
+
 jobs:
     release:
         name: Release
         runs-on: ubuntu-latest
+        permissions:
+          contents: write # to be able to publish a GitHub release
+          issues: write # to be able to comment on released issues
+          pull-requests: write # to be able to comment on released pull requests
+          id-token: write # to enable use of OIDC for trusted publishing and npm provenance
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
+              uses: actions/checkout@v5
               with:
-                  persist-credentials: false
+                fetch-depth: 0
             - name: Setup Node.js
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v6
               with:
                   node-version: "22.20.0"
             - name: Setup pnpm
-              uses: pnpm/action-setup@v2
+              uses: pnpm/action-setup@v4
               with:
                   version: 10.13.1
             - name: Install dependencies
