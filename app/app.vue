@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import { UApp } from "#components";
+import * as locales from "@nuxt/ui/locale";
+
+const { locale } = useI18n();
+</script>
+
 <template>
-  <h1 class="text-3xl font-bold text-blue-500 underline">Tokenizer!</h1>
+  <UApp :locale="locales[locale]">
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </UApp>
 </template>

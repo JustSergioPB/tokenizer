@@ -9,10 +9,22 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+  hub: {
+    database: true
+  },
   modules: [
     '@nuxt/eslint',
     '@nuxt/ui',
     '@nuxt/test-utils',
-    '@nuxt/image'
-  ]
+    '@nuxt/image',
+    'nuxt-auth-utils',
+    '@nuxthub/core',
+    '@nuxtjs/i18n'
+  ],
+  i18n: {
+    locales: [
+      { code: 'es', name: 'Español', file: 'es.json' },
+    ],
+    defaultLocale: 'es',
+  }
 })

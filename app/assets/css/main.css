@@ -1,1 +1,112 @@
 @import "tailwindcss";
+@import "@nuxt/ui";
+
+@layer base {
+  .heading-1 {
+    @apply text-5xl font-bold lg:text-6xl;
+  }
+
+  .heading-2 {
+    @apply text-4xl font-bold lg:text-5xl;
+  }
+
+  .heading-3 {
+    @apply text-3xl font-bold lg:text-4xl;
+  }
+
+  .heading-4 {
+    @apply text-2xl font-semibold lg:text-3xl lg:font-bold;
+  }
+
+  .heading-5 {
+    @apply text-xl font-semibold lg:text-2xl lg:font-bold;
+  }
+
+  .heading-6 {
+    @apply text-lg font-semibold lg:text-xl lg:font-bold;
+  }
+
+  .body-l-semibold {
+    @apply text-lg font-semibold;
+  }
+
+  .body-l-medium {
+    @apply text-lg font-medium;
+  }
+
+  .body-l-regular {
+    @apply text-lg font-normal;
+  }
+
+  .body-md-semibold {
+    @apply text-base font-semibold;
+  }
+
+  .body-md-medium {
+    @apply text-base font-medium;
+  }
+
+  .body-md-regular {
+    @apply text-base font-normal;
+  }
+
+  .body-sm-semibold {
+    @apply text-sm font-semibold;
+  }
+
+  .body-sm-medium {
+    @apply text-sm font-medium;
+  }
+
+  .body-sm-regular {
+    @apply text-sm font-normal;
+  }
+
+  .body-xs-semibold {
+    @apply text-xs font-semibold;
+  }
+
+  .body-xs-medium {
+    @apply text-xs font-medium;
+  }
+
+  .body-xs-regular {
+    @apply text-xs font-normal;
+  }
+
+  .foundation {
+    @apply grid h-screen grid-cols-4 gap-6 px-6 md:grid-cols-8 lg:grid-cols-12 lg:px-64;
+  }
+
+  .beam {
+    @apply grid grid-cols-4 gap-6 px-6 py-6 md:grid-cols-8 lg:grid-cols-12 lg:px-64;
+  }
+
+  .wall {
+    @apply col-span-4 space-y-12 md:col-start-3 lg:col-start-5;
+  }
+
+  .widget {
+    @apply space-y-6;
+  }
+
+  .widget-md {
+    @apply space-y-4;
+  }
+
+  .widget-sm {
+    @apply space-y-2;
+  }
+
+  .tile {
+    @apply flex items-center space-x-6;
+  }
+
+  .tile-md {
+    @apply flex items-center space-x-4;
+  }
+
+  .tile-sm {
+    @apply flex items-center space-x-2;
+  }
+}
